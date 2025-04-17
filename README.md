@@ -1,29 +1,39 @@
 # VueZenApp
 
-This template should help get you started developing with Vue 3 in Vite.
+Mini app developing with Vue 3 in Vite, for taking relaxing breaks during the day: guided breathing, inspirational quotes, minute of calm with timer, etc.
 
-## Recommended IDE Setup
+## 🚀 Technologies Used
+- Vue.js 3
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## ⚙️ Installation & Setup
+To run the project locally:
 
-## Customize configuration
+Clone the repository:
+git clone https://github.com/haaslaura/vuezenapp.git
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+Install dependencies: npm install
 
-## Project Setup
+Start the development server: npm start
 
-```sh
-npm install
-```
+🔨 Features in Progress
+🟩 Home page
 
-### Compile and Hot-Reload for Development
+🔲 Activities menu
 
-```sh
-npm run dev
-```
+🔲 Guided breathing exercise
 
-### Compile and Minify for Production
+🔲 Quote of the day
 
-```sh
-npm run build
-```
+🔲 Quiet minute
+
+🔲 Statistics
+
+🔲 Dark mode
+
+🌍 Live Demo (Coming Soon)
+A live version will be available once the project reaches a stable state.
+
+📬 Contact
+Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/laurahaas-developpement/) if you have any questions or feedback!
+
+This portfolio is a work in progress. Stay tuned for updates! 🚀

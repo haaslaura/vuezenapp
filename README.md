@@ -11,11 +11,11 @@ To run the project locally:
 Clone the repository:
 git clone https://github.com/haaslaura/vuezenapp.git
 
-Install dependencies: npm install
+Install dependencies: `npm install`
 
-Start the development server: npm start
+Start the development server: `npm run dev`
 
-🔨 Features in Progress
+## 🔨 Features in Progress
 🟩 Home page
 
 🔲 Activities menu
@@ -30,10 +30,10 @@ Start the development server: npm start
 
 🔲 Dark mode
 
-🌍 Live Demo (Coming Soon)
+## 🌍 Live Demo (Coming Soon)
 A live version will be available once the project reaches a stable state.
 
-📬 Contact
+## 📬 Contact
 Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/laurahaas-developpement/) if you have any questions or feedback!
 
-This portfolio is a work in progress. Stay tuned for updates! 🚀
+This is a work in progress. Stay tuned for updates! 🚀

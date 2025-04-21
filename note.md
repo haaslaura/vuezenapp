@@ -1,4 +1,4 @@
-🎯 Objectif
+## 🎯 Objectif
 Créer une mini-app pour prendre des pauses relaxantes dans la journée : respiration guidée, citations inspirantes, minute de calme avec minuteur, etc.
 
 ##  🧱 Stack conseillée
@@ -6,6 +6,13 @@ Vue.js 3 (avec Vite ou Vue CLI)
 Tailwind CSS ou SCSS (optionnel)
 LocalStorage pour mémoriser les stats
 Bonus : transitions Vue, animations CSS, dark mode 🌙
+
+## couleurs principales accessibles
+zen-green	éléments interactifs	#3B7C57	
+zen-cream	fond clair principal	#FFFDF6
+
+Et une couleur texte bien contrastée :
+| zen-gray | texte principal | #2F2F2F
 
 ## 🧩 Fonctionnalités proposées
 

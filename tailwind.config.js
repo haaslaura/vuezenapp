@@ -14,6 +14,13 @@ export default {
                 sans: ['"Open Sans"', 'sans-serif'],
                 display: ['"Quicksand"', 'sans-serif'],
             },
+            transitionDuration: {
+                4000: '4000ms',
+            },
+            scale: {
+                75: '.75',
+                125: '1.25',
+            },
         },
     },
     darkMode: 'class', // 🌙 Activate dark mode via a CSS class

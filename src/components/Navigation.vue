@@ -3,7 +3,10 @@
       <h1 class="text-2xl font-display text-zen-green dark:text-green-300">VueZen 🌿</h1>
       <nav class="flex gap-4 text-sm font-semibold">
         <RouterLink to="/" exact-active-class="text-zen-green dark:text-green-300">Accueil</RouterLink>
-        <RouterLink to="/menu" active-class="text-zen-green dark:text-green-300">Menu</RouterLink>
+        <RouterLink to="/breathing" active-class="text-zen-green dark:text-green-300">Respiration guidée</RouterLink>
+        <RouterLink to="/quote" active-class="text-zen-green dark:text-green-300">Citations</RouterLink>
+        <RouterLink to="/calm" active-class="text-zen-green dark:text-green-300">Minute de calme</RouterLink>
+        <RouterLink to="/stats" active-class="text-zen-green dark:text-green-300">Statistiques</RouterLink>
       </nav>
       <button
         @click="$emit('toggle-dark')"

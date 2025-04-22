@@ -1,3 +1,5 @@
 <template>
-    <div></div>
+    <section>
+        <p>Section en cours...</p>
+    </section>
 </template>

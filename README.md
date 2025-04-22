@@ -19,9 +19,9 @@ Start the development server: `npm run dev`
 ## 🔨 Features in Progress
 🟩 Home page
 
-🔲 Activities menu
+🟩 Activities menu
 
-🔲 Guided breathing exercise
+🟩 Guided breathing exercise
 
 🔲 Quote of the day
 

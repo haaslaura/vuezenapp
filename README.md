@@ -3,7 +3,8 @@
 Mini app developing with Vue 3 in Vite, for taking relaxing breaks during the day: guided breathing, inspirational quotes, minute of calm with timer, etc.
 
 ## 🚀 Technologies Used
-- Vue.js 3
+- Vue.js
+- Tailwindcss
 
 ## ⚙️ Installation & Setup
 To run the project locally:

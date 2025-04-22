@@ -1,8 +1,7 @@
-// tailwind.config.js
 export default {
     content: [
-        "./index.html",
-        "./src/**/*.{vue,js,ts,jsx,tsx}",
+        './index.html',
+        './src/**/*.{vue,js,ts,jsx,tsx}',
     ],
     theme: {
         extend: {
@@ -17,6 +16,6 @@ export default {
             },
         },
     },
-    darkMode: 'class', // ⚠️ active le dark mode basé sur une classe
+    darkMode: 'class', // 🌙 Activate dark mode via a CSS class
     plugins: [],
 }

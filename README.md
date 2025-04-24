@@ -1,4 +1,4 @@
-# VueZenApp
+# 🌿 VueZenApp
 
 Mini app developing with Vue 3 in Vite, for taking relaxing breaks during the day: guided breathing, inspirational quotes, minute of calm with timer, etc.
 
@@ -23,9 +23,9 @@ Start the development server: `npm run dev`
 
 🟩 Guided breathing exercise
 
-🔲 Quote of the day
+🟩 Quote of the day
 
-🔲 Quiet minute
+🟩 Quiet minute
 
 🔲 Statistics
 

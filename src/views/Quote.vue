@@ -3,22 +3,30 @@ import { ref, onMounted } from 'vue'
 import axios from 'axios'
 
 const quote = ref(null)
+const translatedQuote = ref('')
 
-async function fetchQuote() {
+async function fetchAndTranslateQuote() {
     try {
-        const res = await axios.get('https://zenquotes.io/api/random')
-        quote.value = res.data[0]
+        const res = await axios.get('https://api.quotable.io/quotes/random?tags=inspirational|gratitude|happiness|motivational|tolerance|wisdom')
+        
+        quote.value = { q: res.data[0].content, a: res.data[0].author }       
+
+        // Call DeepL for translations
+        const deeplRes = await axios.post('http://localhost:3000/api/translate', {
+            text: quote.value.q,
+        })     
+
+        translatedQuote.value = deeplRes.data.translation        
+
     } catch (err) {
         console.error('Erreur lors du chargement de la citation', err)
-        quote.value = {
-            q: 'Prenez soin de vous, même lorsque le monde va trop vite.',
-            a: 'VueZen',
-        }
+        translatedQuote.value = "Prenez soin de vous, même lorsque le monde va trop vite."
+        quote.value = { a: 'VueZen' }
     }
 }
 
 onMounted(() => {
-    fetchQuote()
+    fetchAndTranslateQuote()
 })
 </script>  
 
@@ -27,17 +35,19 @@ onMounted(() => {
         <h2 class="text-3xl font-display">Citations inspirantes ✨</h2>
         
         <!-- Citation -->
-        <blockquote class="max-w-xl text-xl italic text-zen-gray dark:text-white leading-relaxed">
-            “{{ quote?.q }}”
-            <footer class="mt-4 text-sm text-gray-500 dark:text-gray-400">— {{ quote?.a }}</footer>
+        <blockquote class="max-w-xl text-xl italic text-zen-gray dark:text-white leading-relaxed min-h-[100px]">
+            “{{ translatedQuote || 'Chargement en cours...' }}”
+            <footer v-if="quote?.a" class="mt-4 text-sm text-gray-500 dark:text-gray-400">
+                — {{ quote?.a }}
+            </footer>
         </blockquote>
         
         <!-- Bouton -->
         <button
-        @click="fetchQuote"
-        class="px-6 py-2 bg-zen-green text-white rounded hover:bg-green-700 transition"
+            @click="fetchAndTranslateQuote"
+            class="px-6 py-2 bg-zen-green text-white rounded hover:bg-green-700 transition"
         >
-        Nouvelle citation 🔄
+            Nouvelle citation 🔄
         </button>
         
     </section>

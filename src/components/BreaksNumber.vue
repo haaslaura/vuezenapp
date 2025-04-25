@@ -11,21 +11,24 @@ import {
 } from 'chart.js'
 import { Bar } from 'vue-chartjs'
 import { ref } from 'vue'
+import { getBreaksPerDay } from '@/services/statsService'
+
 
 // Registering Chart.js components
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend)
 
-// Données test (à remplacer + tard par celles du localStorage)
+// Data
+const rawData = getBreaksPerDay()
 const chartData = ref({
-    labels: ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim'],
+    labels: Object.keys(rawData),
     datasets: [
-    {
-        label: 'Pauses',
-        backgroundColor: '#3B7C57',
-        data: [2, 1, 3, 2, 4, 1, 0],
-        borderRadius: 4,
-        barThickness: 30,
-    },
+        {
+            label: 'Pauses',
+            backgroundColor: '#3B7C57',
+            data: Object.values(rawData),
+            borderRadius: 4,
+            barThickness: 30,
+        },
     ],
 })
 

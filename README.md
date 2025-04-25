@@ -27,7 +27,7 @@ Start the development server: `npm run dev`
 
 🟩 Quiet minute
 
-🔲 Statistics
+🟩 Statistics
 
 🔲 Dark mode
 

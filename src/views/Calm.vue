@@ -1,5 +1,7 @@
 <script setup>
 import { ref, computed, onBeforeUnmount } from 'vue'
+import { logBreak } from '@/services/statsService'
+
 
 const duration = 60
 const timeLeft = ref(duration)
@@ -50,6 +52,9 @@ function stopSession() {
   audioRef.value?.pause()
   timeLeft.value = duration
   hasStarted.value = false
+
+  // ajout
+  logBreak('calm')
 }
 
 onBeforeUnmount(() => {

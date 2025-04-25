@@ -1,9 +1,11 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { logBreak } from '@/services/statsService'
 
 const phase = ref('inhale') // inhale, hold, exhale
 const message = ref('Inspirez…')
 let intervalId
+let breathingDuration = 0
 
 const cycle = [
 { phase: 'inhale', message: 'Inspirez…', duration: 4000 },
@@ -23,6 +25,12 @@ function startCycle() {
         index = (index + 1) % cycle.length
         startCycle()
     }, current.duration)
+
+    breathingDuration += current.duration
+    if (breathingDuration >= 12000) { // one complete cycle (inhale + hold + exhale + hold)
+        logBreak('calm')
+        breathingDuration = 0 // reset the duration after logging
+    }
 }
 
 onMounted(() => {

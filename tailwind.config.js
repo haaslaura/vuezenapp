@@ -21,6 +21,12 @@ export default {
                 75: '.75',
                 125: '1.25',
             },
+            screen: {
+                sm: '640px',
+                md: '768px',
+                lg: '1024px',
+                xl: '1280px',
+            },
         },
     },
     darkMode: 'class', // 🌙 Activate dark mode via a CSS class

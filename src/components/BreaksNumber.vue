@@ -1,5 +1,3 @@
-<!-- BarChart (1 barre / jour) -->
-
 <script setup>
 import {
     Chart as ChartJS,

@@ -6,18 +6,15 @@ import BreathsNumber from '../components/BreathsNumber.vue'
 
 <template>
     <section class="px-4 py-8 flex flex-col gap-8 max-w-5xl mx-auto">
-        <h2 class="text-3xl font-display text-center">Statistiques de vos pauses zen 🧘‍♀️</h2>
         
-        <BreaksNumber />
+        <h2 class="text-3xl font-display text-center">Statistiques de vos pauses zen 🧘‍♀️</h2>
+    
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <TotalQuietTime />
             <BreathsNumber />
         </div>
+
+        <BreaksNumber />
+
     </section>
 </template>
-
-
-
-<style scoped>
-/* Optionnel : styles pour mise en page ou animations */
-</style>

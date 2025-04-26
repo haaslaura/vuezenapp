@@ -1,1 +1,28 @@
 @import "tailwindcss";
+
+@theme {
+    --color-zen-green-50: #f1f8f3;
+    --color-zen-green-100: #ddeee1;
+    --color-zen-green-200: #bdddc6;
+    --color-zen-green-300: #91c4a4;
+    --color-zen-green-400: #62a57d;
+    --color-zen-green-500: #3b7c57;
+    --color-zen-green-600: #2f6c4a;
+    --color-zen-green-700: #25573d;
+    --color-zen-green-800: #204532;
+    --color-zen-green-900: #1b392a;
+    --color-zen-green-950: #0e2018;
+
+    --color-zen-cream: #FFFDF6;
+    --color-zen-gray: #2F2F2F;
+
+    --font-sans: "Open Sans", sans-serif;
+    --font-display: "Quicksand", sans-serif;
+
+    --container-sm: 640px;
+    --container-md: 768px;
+    --container-lg: 1024px;
+    --container-xl: 1280px;
+
+
+};

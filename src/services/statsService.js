@@ -1,5 +1,5 @@
 import dataTest from '@/data/dataTest.json'
-const USE_TEST_DATA = false // 🔁 Set to true to display test data
+const USE_TEST_DATA = true // 🔁 Set to true to display test data
 const STORAGE_KEY = 'vuezen_stats'
 
 

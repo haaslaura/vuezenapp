@@ -32,7 +32,7 @@ onMounted(() => {
 
 <template>
     <section class="flex flex-col items-center justify-center text-center gap-6 px-4">
-        <h2 class="text-3xl font-display">Citations inspirantes ✨</h2>
+        <h2 class="text-3xl font-display">Citations inspirantes <span aria-hidden="true">✨</span></h2>
         
         <!-- Citation -->
         <blockquote class="max-w-xl text-xl italic text-zen-gray dark:text-white leading-relaxed min-h-[100px]">
@@ -44,6 +44,7 @@ onMounted(() => {
         
         <!-- Bouton -->
         <button
+            aria-label="Chargement d'une nouvelle citation"
             @click="fetchAndTranslateQuote"
             class="px-6 py-2 bg-zen-green text-white rounded hover:bg-green-700 transition"
         >

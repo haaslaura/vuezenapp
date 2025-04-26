@@ -65,7 +65,7 @@ onBeforeUnmount(() => {
 
 <template>
     <section class="flex flex-col items-center justify-center text-center gap-6">
-        <h2 class="text-3xl font-display">La minute de calme 🌊</h2>
+        <h2 class="text-3xl font-display">La minute de calme <span aria-hidden="true">🌊</span></h2>
         
         <p class="text-xl text-zen-gray dark:text-white">
             Respirez, détendez-vous, profitez de ce moment…
@@ -79,6 +79,7 @@ onBeforeUnmount(() => {
         <!-- Controls -->
         <div>
             <button
+                aria-label="Session de calme lancée"
                 v-if="!hasStarted"
                 @click="startSession"
                 class="px-6 py-2 bg-zen-green text-white rounded hover:bg-green-700 transition"

@@ -52,11 +52,17 @@ onBeforeUnmount(() => {
                 'scale-100': phase === 'hold',
                 'scale-75': phase === 'exhale'
             }"
+            aria-live="assertive"
+            role="progressbar"
+            aria-valuenow="0"
+            aria-valuemax="100"
+            aria-valuetext="Cercle de respiration, phase {{ phase }}"
         >
+            <span class="sr-only">{{ message }}</span>
         </div>
         
         <!-- Texte de respiration -->
-        <p class="text-xl font-semibold text-zen-gray dark:text-white transition-all duration-500">
+        <p class="mt-4 text-xl font-semibold text-zen-gray dark:text-white transition-all duration-500">
             {{ message }}
         </p>
     </div>

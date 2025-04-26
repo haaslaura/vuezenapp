@@ -52,9 +52,14 @@ const chartOptions = ref({
 
 <template>
     <div class="bg-white dark:bg-zinc-800 rounded-xl shadow p-6 mb-6">
-        <h2 class="text-lg font-semibold text-zen-green dark:text-green-300 mb-4">
+        <h3 class="text-lg font-semibold text-zen-green dark:text-green-300 mb-4">
             Moments de respiration dans la journée
-        </h2>
-        <Bar :data="chartData" :options="chartOptions" />
+        </h3>
+        <Bar
+            aria-label="Graphique des moments de respiration dans la journée"
+            :data="chartData" :options="chartOptions"
+        >
+            Le schéma n'a pas pu être chargé.
+        </Bar>
     </div>
 </template>

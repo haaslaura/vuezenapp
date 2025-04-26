@@ -5,6 +5,8 @@ import axios from 'axios'
 const quote = ref(null)
 const translatedQuote = ref('')
 
+const PORT = import.meta.env.VUE_APP_PORT || 3000
+
 async function fetchAndTranslateQuote() {
     try {
         const res = await axios.get('https://api.quotable.io/quotes/random?tags=inspirational|gratitude|happiness|motivational|tolerance|wisdom')
@@ -12,7 +14,7 @@ async function fetchAndTranslateQuote() {
         quote.value = { q: res.data[0].content, a: res.data[0].author }       
 
         // Call DeepL for translations
-        const deeplRes = await axios.post('http://localhost:3000/api/translate', {
+        const deeplRes = await axios.post(`http://localhost:${PORT}/api/translate`, {
             text: quote.value.q,
         })     
 

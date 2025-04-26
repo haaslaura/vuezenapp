@@ -46,12 +46,13 @@ onBeforeUnmount(() => {
     <div class="flex flex-col items-center justify-center gap-8 text-center">
         <!-- Cercle animé -->
         <div
-            class="w-40 h-40 md:w-56 md:h-56 rounded-full border-4 border-zen-green transition-all duration-4000 ease-in-out"
+            class="w-40 h-40 md:w-56 md:h-56 rounded-full border-4 border-zen-green transition-all duration-4000 ease-in-out focus:outline-none focus:ring-4 focus:ring-green-400"
             :class="{
                 'scale-125': phase === 'inhale',
                 'scale-100': phase === 'hold',
                 'scale-75': phase === 'exhale'
             }"
+            tabindex="0"
             aria-live="assertive"
             role="progressbar"
             aria-valuenow="0"

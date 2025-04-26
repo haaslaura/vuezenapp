@@ -39,7 +39,7 @@ function toggleClass() {
     <Navigation @toggle-dark="toggleDark" :isDark="isDark" />
 
     <!-- Main content -->
-    <main class="flex-1 px-6 py-10">
+    <main class="flex-1 px-6 py-10 z-10">
       <transition name="fade" mode="out-in">
         <router-view />
       </transition>

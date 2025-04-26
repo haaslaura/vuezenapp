@@ -1,5 +1,12 @@
+<script setup>
+import BurgerMenu from './BurgerMenu.vue';
+import { useDarkMode } from '@/stores/darkMode';
+
+const { isDark, toggleDark } = useDarkMode();
+</script> 
+
 <template>
-  <header class="flex items-center justify-between px-6 py-4 shadow bg-white/70 dark:bg-zinc-900/80 backdrop-blur-sm">
+  <header class="flex items-center justify-between px-6 py-4 shadow bg-white/70 dark:bg-zinc-900/80 backdrop-blur-sm z-20">
     
     <h1 class="text-2xl font-display text-zen-green dark:text-green-300">VueZen <span aria-hidden="true">🌿</span></h1>
     
@@ -15,11 +22,6 @@
     <!-- Menu burger mobile -->
     <BurgerMenu />
 
-    <!-- <button
-      aria-label="Changer le thème"
-      @click="$emit('toggle-dark')"
-      class="ml-4 px-3 py-1 text-sm rounded bg-zen-green text-white hover:bg-green-700 transition"
-    > -->
     <button
       aria-label="Changer le thème"
       @click="toggleDark"
@@ -30,11 +32,3 @@
   
     </header>
 </template>
-
-<script setup>
-import BurgerMenu from './BurgerMenu.vue';
-import { useDarkMode } from '@/stores/darkMode';
-
-const { isDark, toggleDark } = useDarkMode();
-
-</script> 

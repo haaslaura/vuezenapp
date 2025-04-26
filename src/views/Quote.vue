@@ -14,7 +14,7 @@ async function fetchAndTranslateQuote() {
         quote.value = { q: res.data[0].content, a: res.data[0].author }       
 
         // Call DeepL for translations
-        const deeplRes = await axios.post(`http://localhost:${PORT}/api/translate`, {
+        const deeplRes = await axios.post(`https://api.vuezenapp.laura-haas.dev:${PORT}/api/translate`, {
             text: quote.value.q,
         })     
 

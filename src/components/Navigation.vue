@@ -15,9 +15,14 @@
     <!-- Menu burger mobile -->
     <BurgerMenu />
 
-    <button
+    <!-- <button
       aria-label="Changer le thème"
       @click="$emit('toggle-dark')"
+      class="ml-4 px-3 py-1 text-sm rounded bg-zen-green text-white hover:bg-green-700 transition"
+    > -->
+    <button
+      aria-label="Changer le thème"
+      @click="toggleDark"
       class="ml-4 px-3 py-1 text-sm rounded bg-zen-green text-white hover:bg-green-700 transition"
     >
       {{ isDark ? "☀️ Clair" : "🌙 Sombre" }}
@@ -28,8 +33,8 @@
 
 <script setup>
 import BurgerMenu from './BurgerMenu.vue';
+import { useDarkMode } from '@/stores/darkMode';
 
-defineProps({
-  isDark: Boolean
-})
+const { isDark, toggleDark } = useDarkMode();
+
 </script> 

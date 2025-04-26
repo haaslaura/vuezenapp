@@ -65,9 +65,9 @@ onBeforeUnmount(() => {
 
 <template>
     <section class="flex flex-col items-center justify-center text-center gap-6">
-        <h2 class="text-3xl font-display text-zen-cream-900">La minute de calme <span aria-hidden="true">🌊</span></h2>
+        <h2 class="text-3xl font-display text-zen-cream-900 dark:text-gray-200">La minute de calme <span aria-hidden="true">🌊</span></h2>
         
-        <p class="text-xl text-zen-cream-950 dark:text-white">
+        <p class="text-xl text-zen-cream-950 dark:text-gray-200">
             Respirez, détendez-vous, profitez de ce moment…
         </p>
         

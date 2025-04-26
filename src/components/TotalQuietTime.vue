@@ -7,7 +7,7 @@ const totalMinutes = ref(getTotalCalmTime())
 
 <template>
     <div class="flex flex-col items-center justify-center bg-white dark:bg-zinc-800 rounded-xl shadow p-6 text-center">
-        <h3 aria-labelledby="ttc" class="text-lg font-semibold text-zen-green-600 dark:text-green-300 mb-4">
+        <h3 aria-labelledby="ttc" class="text-lg font-semibold text-zen-green-600 dark:text-gray-200 mb-4">
             Temps total de calme
         </h3>
         

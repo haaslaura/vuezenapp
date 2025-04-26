@@ -24,8 +24,9 @@ const chartData = ref({
         data: Object.values(data),
         borderRadius: 4,
         barThickness: 30,
-    },
+    }
     ],
+
 })
 
 const chartOptions = ref({
@@ -52,7 +53,7 @@ const chartOptions = ref({
 
 <template>
     <div class="bg-white dark:bg-zinc-800 rounded-xl shadow p-6 mb-6">
-        <h3 class="text-lg font-semibold text-zen-green-600 dark:text-green-300 mb-4">
+        <h3 class="text-lg font-semibold text-zen-green-600 dark:text-gray-200 mb-4">
             Moments de respiration dans la journée
         </h3>
         <Bar

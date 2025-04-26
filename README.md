@@ -5,16 +5,20 @@ Mini app developing with Vue 3 in Vite, for taking relaxing breaks during the da
 ## 🚀 Technologies Used
 - Vue.js
 - Tailwindcss
+- Vue-chartjs
+- Vue routeur 
 
 ## ⚙️ Installation & Setup
 To run the project locally:
 
 Clone the repository:
-git clone https://github.com/haaslaura/vuezenapp.git
+`git clone https://github.com/haaslaura/vuezenapp.git`
 
-Install dependencies: `npm install`
+Install dependencies:
+`npm install`
 
-Start the development server: `npm run dev`
+Start the development server:
+`npm run dev`
 
 ## 🔨 Features in Progress
 🟩 Home page
@@ -29,7 +33,7 @@ Start the development server: `npm run dev`
 
 🟩 Statistics
 
-🔲 Dark mode
+🟩 Dark mode
 
 ## 🌍 Live Demo (Coming Soon)
 A live version will be available once the project reaches a stable state.

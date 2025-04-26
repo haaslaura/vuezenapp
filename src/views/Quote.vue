@@ -34,10 +34,10 @@ onMounted(() => {
 
 <template>
     <section class="flex flex-col items-center justify-center text-center gap-6 px-4">
-        <h2 class="text-3xl font-display text-zen-cream-900">Citations inspirantes <span aria-hidden="true">✨</span></h2>
+        <h2 class="text-3xl font-display text-zen-cream-900 dark:text-gray-200">Citations inspirantes <span aria-hidden="true">✨</span></h2>
         
         <!-- Citation -->
-        <blockquote class="max-w-xl text-xl italic text-zen-cream-950 dark:text-white leading-relaxed min-h-[100px]">
+        <blockquote class="max-w-xl text-xl italic text-zen-cream-950 dark:text-gray-200 leading-relaxed min-h-[100px]">
             “{{ translatedQuote || 'Chargement en cours...' }}”
             <footer v-if="quote?.a" class="mt-4 text-sm text-zen-cream-800 dark:text-gray-400">
                 — {{ quote?.a }}

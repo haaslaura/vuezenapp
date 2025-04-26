@@ -61,7 +61,7 @@ onBeforeUnmount(() => {
         </div>
         
         <!-- Texte de respiration -->
-        <p class="mt-4 text-xl font-semibold text-zen-green-600 dark:text-white transition-all duration-500">
+        <p class="mt-4 text-xl font-semibold text-zen-green-600 dark:text-gray-200 transition-all duration-500">
             {{ message }}
         </p>
     </div>

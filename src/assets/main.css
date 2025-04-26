@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
     --color-zen-green-50: #f1f8f3;
     --color-zen-green-100: #ddeee1;

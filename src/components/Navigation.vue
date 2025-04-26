@@ -11,12 +11,12 @@ const { isDark, toggleDark } = useDarkMode();
     <h1 class="text-2xl font-display text-zen-green-400 dark:text-green-300">VueZen <span aria-hidden="true">🌿</span></h1>
     
     <!-- Nav desktop -->
-    <nav class="hidden lg:flex gap-4 text-sm font-semibold">
-      <RouterLink to="/" exact-active-class="text-zen-green dark:text-green-300">Accueil</RouterLink>
-      <RouterLink to="/breathing" active-class="text-zen-green dark:text-green-300">Respiration guidée</RouterLink>
-      <RouterLink to="/quote" active-class="text-zen-green dark:text-green-300">Citations</RouterLink>
-      <RouterLink to="/calm" active-class="text-zen-green dark:text-green-300">Minute de calme</RouterLink>
-      <RouterLink to="/stats" active-class="text-zen-green dark:text-green-300">Statistiques</RouterLink>
+    <nav class="hidden lg:flex gap-4 text-sm font-semibold ">
+      <RouterLink class="hover:text-green-700 dark:hover:text-zen-green-300" to="/" exact-active-class="text-zen-green-600 dark:text-green-300">Accueil</RouterLink>
+      <RouterLink class="hover:text-green-700 dark:hover:text-zen-green-300" to="/breathing" active-class="text-zen-green-600 dark:text-green-300">Respiration guidée</RouterLink>
+      <RouterLink class="hover:text-green-700 dark:hover:text-zen-green-300" to="/quote" active-class="text-zen-green-600 dark:text-green-300">Citations</RouterLink>
+      <RouterLink class="hover:text-green-700 dark:hover:text-zen-green-300" to="/calm" active-class="text-zen-green-600 dark:text-green-300">Minute de calme</RouterLink>
+      <RouterLink class="hover:text-green-700 dark:hover:text-zen-green-300" to="/stats" active-class="text-zen-green-600 dark:text-green-300">Statistiques</RouterLink>
     </nav>
     
     <!-- Menu burger mobile -->

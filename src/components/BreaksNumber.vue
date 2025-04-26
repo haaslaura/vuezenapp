@@ -54,7 +54,7 @@ const chartOptions = ref({
 
 <template>
     <div class="bg-white dark:bg-zinc-800 rounded-xl shadow p-6 mb-6">
-        <h3 class="text-lg font-semibold text-zen-green dark:text-green-300 mb-4">
+        <h3 class="text-lg font-semibold text-zen-green-600 dark:text-green-300 mb-4">
             Pauses réalisées par jour
         </h3>
         <Bar

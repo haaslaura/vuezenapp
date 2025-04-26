@@ -34,12 +34,12 @@ onMounted(() => {
 
 <template>
     <section class="flex flex-col items-center justify-center text-center gap-6 px-4">
-        <h2 class="text-3xl font-display">Citations inspirantes <span aria-hidden="true">✨</span></h2>
+        <h2 class="text-3xl font-display text-zen-cream-900">Citations inspirantes <span aria-hidden="true">✨</span></h2>
         
         <!-- Citation -->
-        <blockquote class="max-w-xl text-xl italic text-zen-gray dark:text-white leading-relaxed min-h-[100px]">
+        <blockquote class="max-w-xl text-xl italic text-zen-cream-950 dark:text-white leading-relaxed min-h-[100px]">
             “{{ translatedQuote || 'Chargement en cours...' }}”
-            <footer v-if="quote?.a" class="mt-4 text-sm text-gray-500 dark:text-gray-400">
+            <footer v-if="quote?.a" class="mt-4 text-sm text-zen-cream-800 dark:text-gray-400">
                 — {{ quote?.a }}
             </footer>
         </blockquote>
@@ -48,7 +48,7 @@ onMounted(() => {
         <button
             aria-label="Chargement d'une nouvelle citation"
             @click="fetchAndTranslateQuote"
-            class="px-6 py-2 bg-zen-green text-white rounded hover:bg-green-700 transition"
+            class="px-6 py-2 rounded bg-zen-green-600 text-white hover:bg-green-700 transition"
         >
             Nouvelle citation 🔄
         </button>

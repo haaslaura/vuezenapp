@@ -24,7 +24,7 @@ watchEffect(() => {
     <div class="lg:hidden relative z-50">
         <!-- Burger button -->
         <button
-            class="text-3xl text-zen-green dark:text-green-300"
+            class="text-3xl text-zen-green-600 dark:text-green-300"
             @click="toggleMenu"
         >
             ☰
@@ -34,7 +34,7 @@ watchEffect(() => {
         <transition name="fade">
             <div
                 v-if="isOpen"
-                class="fixed h-screen inset-0 bg-zen-cream dark:bg-zinc-900 text-zen-gray dark:text-white flex flex-col items-center justify-center space-y-10 text-xl font-semibold transition-all duration-300"
+                class="fixed h-screen inset-0 bg-zen-green-400 dark:bg-zinc-900 text-zen-gray dark:text-white flex flex-col items-center justify-center space-y-10 text-xl font-semibold transition-all duration-300"
             >
                 <button
                     class="absolute top-6 right-6 text-2xl"

@@ -46,7 +46,7 @@ onBeforeUnmount(() => {
     <div class="flex flex-col items-center justify-center gap-8 text-center">
         <!-- Cercle animé -->
         <div
-            class="w-40 h-40 md:w-56 md:h-56 rounded-full border-4 border-zen-green transition-all duration-4000 ease-in-out focus:outline-none focus:ring-4 focus:ring-green-400"
+            class="w-40 h-40 md:w-56 md:h-56 rounded-full border-4 border-zen-green-600 transition-all duration-4000 ease-in-out focus:outline-none focus:ring-8 focus:ring-zen-green-400"
             :class="{
                 'scale-125': phase === 'inhale',
                 'scale-100': phase === 'hold',
@@ -61,7 +61,7 @@ onBeforeUnmount(() => {
         </div>
         
         <!-- Texte de respiration -->
-        <p class="mt-4 text-xl font-semibold text-zen-gray dark:text-white transition-all duration-500">
+        <p class="mt-4 text-xl font-semibold text-zen-green-600 dark:text-white transition-all duration-500">
             {{ message }}
         </p>
     </div>

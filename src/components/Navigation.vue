@@ -8,7 +8,7 @@ const { isDark, toggleDark } = useDarkMode();
 <template>
   <header class="flex items-center justify-between px-6 py-4 shadow bg-white/70 dark:bg-zinc-900/80 backdrop-blur-sm z-20">
     
-    <h1 class="text-2xl font-display text-zen-green dark:text-green-300">VueZen <span aria-hidden="true">🌿</span></h1>
+    <h1 class="text-2xl font-display text-zen-green-400 dark:text-green-300">VueZen <span aria-hidden="true">🌿</span></h1>
     
     <!-- Nav desktop -->
     <nav class="hidden lg:flex gap-4 text-sm font-semibold">
@@ -25,7 +25,7 @@ const { isDark, toggleDark } = useDarkMode();
     <button
       aria-label="Changer le thème"
       @click="toggleDark"
-      class="ml-4 px-3 py-1 text-sm rounded bg-zen-green text-white hover:bg-green-700 transition"
+      class="ml-4 px-3 py-2 text-sm rounded bg-zen-green-600 text-white hover:bg-green-700 transition"
     >
       {{ isDark ? "☀️ Clair" : "🌙 Sombre" }}
     </button>

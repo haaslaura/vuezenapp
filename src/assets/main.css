@@ -13,7 +13,18 @@
     --color-zen-green-900: #1b392a;
     --color-zen-green-950: #0e2018;
 
-    --color-zen-cream: #FFFDF6;
+    --color-zen-cream-50: #fffdf6;
+    --color-zen-cream-100: #fff6d5;
+    --color-zen-cream-200: #feeaaa;
+    --color-zen-cream-300: #fdd874;
+    --color-zen-cream-400: #fbbc3c;
+    --color-zen-cream-500: #f9a516;
+    --color-zen-cream-600: #ea890c;
+    --color-zen-cream-700: #c2690c;
+    --color-zen-cream-800: #9a5212;
+    --color-zen-cream-900: #7c4512;
+    --color-zen-cream-950: #432107;
+
     --color-zen-gray: #2F2F2F;
 
     --font-sans: "Open Sans", sans-serif;

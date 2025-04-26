@@ -33,7 +33,7 @@ function toggleClass() {
 </style>
 
 <template>
-  <div class="min-h-screen flex flex-col font-sans bg-gradient-to-b from-zen-cream to-white dark:from-zinc-800 dark:to-zinc-900 text-zen-gray dark:text-white transition-colors duration-300">
+  <div class="min-h-screen flex flex-col font-sans bg-gradient-to-b from-zen-cream-50 to-zen-cream-300 dark:from-zinc-800 dark:to-zinc-900 text-zen-gray dark:text-white transition-colors duration-300">
 
     <!-- Header -->
     <Navigation @toggle-dark="toggleDark" :isDark="isDark" />
@@ -46,11 +46,11 @@ function toggleClass() {
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-100 dark:bg-zinc-800 text-center py-4 text-sm text-gray-600 dark:text-gray-300">
+    <footer class="bg-gray-100 dark:bg-zinc-800 text-center py-4 text-sm text-zen-cream-800 dark:text-gray-300">
       &copy; {{ currentYear }} VueZen by
         <a
           aria-label="Portfolio de Laura Haas"
-          class="text-zen-green dark:text-green-300"
+          class="text-zen-green-500 dark:text-green-300 hover:underline"
           href="https://laura-haas.dev/"
           target="_blank"
         >

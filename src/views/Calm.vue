@@ -65,14 +65,14 @@ onBeforeUnmount(() => {
 
 <template>
     <section class="flex flex-col items-center justify-center text-center gap-6">
-        <h2 class="text-3xl font-display">La minute de calme <span aria-hidden="true">🌊</span></h2>
+        <h2 class="text-3xl font-display text-zen-cream-900">La minute de calme <span aria-hidden="true">🌊</span></h2>
         
-        <p class="text-xl text-zen-gray dark:text-white">
+        <p class="text-xl text-zen-cream-950 dark:text-white">
             Respirez, détendez-vous, profitez de ce moment…
         </p>
         
         <!-- Timer -->
-        <div class="text-6xl font-mono text-zen-green dark:text-green-300">
+        <div class="text-6xl font-mono text-zen-green-400 dark:text-green-300">
             {{ formattedTime }}
         </div>
 
@@ -82,7 +82,7 @@ onBeforeUnmount(() => {
                 aria-label="Session de calme lancée"
                 v-if="!hasStarted"
                 @click="startSession"
-                class="px-6 py-2 bg-zen-green text-white rounded hover:bg-green-700 transition"
+                class="px-6 py-2 bg-zen-green-600 text-white rounded hover:bg-green-700 transition"
             >
                 Démarrer ▶️
             </button>
@@ -91,7 +91,7 @@ onBeforeUnmount(() => {
                 v-else
                 @click="toggleTimer"
                 :disabled="timeLeft === 0"
-                class="px-6 py-2 bg-zen-green text-white rounded hover:bg-green-700 transition"
+                class="px-6 py-2 bg-zen-green-600 text-white rounded hover:bg-green-700 transition"
             >
                 {{ isRunning ? "Pause ⏸️" : "Reprendre ▶️" }}
             </button>

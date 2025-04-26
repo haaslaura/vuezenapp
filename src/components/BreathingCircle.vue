@@ -53,11 +53,9 @@ onBeforeUnmount(() => {
                 'scale-75': phase === 'exhale'
             }"
             tabindex="0"
-            aria-live="assertive"
             role="progressbar"
-            aria-valuenow="0"
-            aria-valuemax="100"
-            aria-valuetext="Cercle de respiration, phase {{ phase }}"
+            aria-live="polite"
+            :aria-valuetext="`Phase actuelle : ${message}`"
         >
             <span class="sr-only">{{ message }}</span>
         </div>

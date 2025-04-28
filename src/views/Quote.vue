@@ -5,7 +5,9 @@ import axios from 'axios'
 const quote = ref(null)
 const translatedQuote = ref('')
 
-const PORT = import.meta.env.VUE_APP_PORT || 3000
+const PORT = import.meta.env.VUE_APP_PORT || 4001
+const API_URL = import.meta.env.VUE_APP_API_URL || 'https://api.vuezenapp.laura-haas.dev'
+
 
 async function fetchAndTranslateQuote() {
     try {
@@ -14,7 +16,7 @@ async function fetchAndTranslateQuote() {
         quote.value = { q: res.data[0].content, a: res.data[0].author }       
 
         // Call DeepL for translations
-        const deeplRes = await axios.post(`https://api.vuezenapp.laura-haas.dev:${PORT}/api/translate`, {
+        const deeplRes = await axios.post(`${API_URL}:${PORT}/api/translate`, {
             text: quote.value.q,
         })     
 

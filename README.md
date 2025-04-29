@@ -35,8 +35,8 @@ Start the development server:
 
 🟩 Dark mode
 
-## 🌍 Live Demo (Coming Soon)
-A live version will be available once the project reaches a stable state.
+## 🌍 Live Demo
+You can test the application at https://vuezenapp.laura-haas.dev/. The data in the "Statistics" section is stored in the localStorage. Don't hesitate to take a minute (or several) to relax!
 
 ## 📬 Contact
 Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/laurahaas-developpement/) if you have any questions or feedback!

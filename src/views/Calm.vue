@@ -98,7 +98,7 @@ onBeforeUnmount(() => {
         </div>
 
         <!-- Sound -->
-        <audio ref="audioRef" src="/sounds/waves-and-seagulls.wav" loop></audio>
+        <audio ref="audioRef" src="/sounds/waves-and-seagulls.wav" loop />
     
     </section>
 </template>

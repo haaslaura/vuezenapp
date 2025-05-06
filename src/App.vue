@@ -1,5 +1,5 @@
 <script setup>
-import Navigation from './components/Navigation.vue'
+import Navigation from '@/components/MainNavigation.vue'
 import { ref, onMounted } from 'vue'
 
 const isDark = ref(false)
@@ -36,7 +36,7 @@ function toggleClass() {
   <div class="min-h-screen flex flex-col font-sans bg-gradient-to-b from-zen-cream-50 to-zen-cream-300 dark:from-zinc-800 dark:to-zinc-900 text-zen-gray dark:text-white transition-colors duration-300">
 
     <!-- Header -->
-    <Navigation @toggle-dark="toggleDark" :isDark="isDark" />
+    <Navigation @toggle-dark="toggleDark" :isDark />
 
     <!-- Main content -->
     <main class="flex-1 px-6 py-10 z-10">

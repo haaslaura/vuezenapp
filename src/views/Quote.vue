@@ -2,30 +2,41 @@
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
 
-const quote = ref(null)
-const translatedQuote = ref('')
-
-const PORT = import.meta.env.VUE_APP_PORT
-const API_URL = import.meta.env.VUE_APP_API_URL || 'http://localhost'
+const vueZenQuote = ref({});
+const rateLimitMessage = ref('');
+const clickTimestamps = ref([]);
 
 
 async function fetchAndTranslateQuote() {
+
+    // The free api is limited to 5 clicks for 30s
+    // If the number of clicks is greater than 5, a message is displayed to users
+    const now = Date.now()
+    clickTimestamps.value = clickTimestamps.value.filter(ts => now - ts < 30000)
+
+    if (clickTimestamps.value.length >= 4) {
+        rateLimitMessage.value = "Prenez le temps de profiter de cette citation inspirante 🌿"
+        setTimeout(() => {
+            rateLimitMessage.value = '' // Message reset after 30 seconds
+        }, 30000)
+        return
+    }
+
+    clickTimestamps.value.push(now)
+
     try {
-        const res = await axios.get('https://api.quotable.io/quotes/random?tags=inspirational|gratitude|happiness|motivational|tolerance|wisdom')
+        rateLimitMessage.value = '' // Reset message if all is well
+
+        // const apiRes = await axios.get(`https://api.vuezenapp.laura-haas.dev/api/translate`)
+        const apiRes = await axios.get(`http://localhost:4002/api/translate`);
+        vueZenQuote.value = { q: apiRes.data.translatedQuote, a: apiRes.data.author }        
         
-        quote.value = { q: res.data[0].content, a: res.data[0].author }       
-
-        // Call DeepL for translations
-        const deeplRes = await axios.post(`https://api.vuezenapp.laura-haas.dev/api/translate`, {
-            text: quote.value.q,
-        })     
-
-        translatedQuote.value = deeplRes.data.translation        
-
     } catch (err) {
         console.error('Erreur lors du chargement de la citation', err)
-        translatedQuote.value = "Prenez soin de vous, même lorsque le monde va trop vite."
-        quote.value = { a: 'VueZen' }
+        vueZenQuote.value = {
+            q: "Prenez soin de vous, même lorsque le monde va trop vite.",
+            a: "VueZen"
+        }
     }
 }
 
@@ -40,9 +51,9 @@ onMounted(() => {
         
         <!-- Citation -->
         <blockquote class="max-w-xl text-xl italic text-zen-cream-950 dark:text-gray-200 leading-relaxed min-h-[100px]">
-            “{{ translatedQuote || 'Chargement en cours...' }}”
-            <footer v-if="quote?.a" class="mt-4 text-sm text-zen-cream-800 dark:text-gray-400">
-                — {{ quote?.a }}
+            “{{ vueZenQuote.q || 'Chargement en cours...' }}”
+            <footer v-if="vueZenQuote?.a" class="mt-4 text-sm text-zen-cream-800 dark:text-gray-400">
+                — {{ vueZenQuote?.a }}
             </footer>
         </blockquote>
         
@@ -54,6 +65,11 @@ onMounted(() => {
         >
             Nouvelle citation 🔄
         </button>
-        
+
+        <!-- Limitation message -->
+        <p role="status" v-if="rateLimitMessage" class="text-red-600 mt-2 text-sm">
+            {{ rateLimitMessage }}
+        </p>
+
     </section>
 </template>

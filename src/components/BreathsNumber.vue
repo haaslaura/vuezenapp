@@ -8,14 +8,14 @@ import {
     Legend,
 } from 'chart.js'
 import { Bar } from 'vue-chartjs'
-import { ref } from 'vue'
+import { reactive } from 'vue'
 import { getBreathStatsByPeriod } from '@/services/statsService'
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend)
 
 const data = getBreathStatsByPeriod()
 
-const chartData = ref({
+const chartData = reactive({
     labels: Object.keys(data),
     datasets: [
     {
@@ -29,7 +29,7 @@ const chartData = ref({
 
 })
 
-const chartOptions = ref({
+const chartOptions = reactive({
     responsive: true,
     plugins: {
         legend: { display: false },

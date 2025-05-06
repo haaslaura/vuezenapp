@@ -6,8 +6,19 @@ import pluginOxlint from 'eslint-plugin-oxlint'
 
 
 export default defineConfig([
-  { files: ["**/*.{js,mjs,cjs,vue}"], plugins: { js }, extends: ["js/recommended"] },
-  { files: ["**/*.{js,mjs,cjs,vue}"], languageOptions: { globals: globals.browser } },
+  {
+    files: ["**/*.{js,mjs,cjs,vue}"],
+    plugins: { js },
+    extends: ["js/recommended"],
+    ignores: [
+      "**/node_modules/**",
+      "**/dist/**"
+    ],
+  },
+  {
+    files: ["**/*.{js,mjs,cjs,vue}"],
+    languageOptions: { globals: globals.browser }
+  },
   pluginVue.configs["flat/essential"],
   ...pluginOxlint.configs['flat/recommended']
 ]);

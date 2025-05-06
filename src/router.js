@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Home from './views/Home.vue'
-import Breathing from './views/Breathing.vue'
-import Quote from './views/Quote.vue'
-import Calm from './views/Calm.vue'
-import Stats from './views/Stats.vue'
+import Home from './views/VZHome.vue'
+import Breathing from './views/VZBreathing.vue'
+import Quote from './views/VZQuote.vue'
+import Calm from './views/VZCalm.vue'
+import Stats from './views/VZStats.vue'
 
 const routes = [
   { path: '/', name: 'Home', component: Home },

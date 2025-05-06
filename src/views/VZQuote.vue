@@ -27,8 +27,8 @@ async function fetchAndTranslateQuote() {
     try {
         rateLimitMessage.value = '' // Reset message if all is well
 
-        // const apiRes = await axios.get(`https://api.vuezenapp.laura-haas.dev/api/translate`)
-        const apiRes = await axios.get(`http://localhost:4002/api/translate`);
+        const apiRes = await axios.get(`https://api.vuezenapp.laura-haas.dev/api/translate`)
+        // const apiRes = await axios.get(`http://localhost:4002/api/translate`);
         vueZenQuote.value = { q: apiRes.data.translatedQuote, a: apiRes.data.author }        
         
     } catch (err) {
